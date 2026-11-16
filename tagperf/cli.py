@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 import sys
 from pathlib import Path
 
@@ -85,11 +86,16 @@ def main(argv=None):
         _dump({"input": args.input, "order": order, "min_ratio": args.min_ratio,
                "summary": summarize(tags, order), "changepoints": cps}, args.out)
     elif args.command == "control":
-        from .measure import source_at
+        from .measure import release_worktree, source_at
         import tempfile
-        with tempfile.TemporaryDirectory(prefix="tagperf-aa-") as tmp:
-            src = source_at(args.repo, args.tag, Path(tmp) / "tree")
+        tmp = Path(tempfile.mkdtemp(prefix="tagperf-aa-"))
+        tree = tmp / "tree"
+        try:
+            src = source_at(args.repo, args.tag, tree)
             _dump(null_control(args.workload, str(src), args.iters, args.pairs), args.out)
+        finally:
+            release_worktree(args.repo, tree)
+            shutil.rmtree(tmp, ignore_errors=True)
     elif args.command == "bisect":
         _dump(bisect(args.repo, args.good, args.bad, args.workload, args.iters,
                      args.repeats, args.threshold_ratio), args.out)

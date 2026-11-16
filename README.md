@@ -171,7 +171,7 @@ time, on an otherwise idle machine.
 
 ## Tests
 
-`7 passed in 21.1s` (`python -m pytest tests -q`). Coverage:
+`8 passed in 22.1s` (`python -m pytest tests -q`). Coverage:
 
 - changepoint detection, flat/noise rejection, deterministic bootstrap CI;
 - an end-to-end synthetic git repository with 8 commits: the bisect must find the
@@ -181,14 +181,19 @@ time, on an otherwise idle machine.
   `direction=speedup`, which is the regression test for the one-directional
   classifier bug described above;
 - both bisects assert `attempts[-1].verified is True`, so an unverified answer
-  fails the suite rather than being reported.
+  fails the suite rather than being reported;
+- `git worktree list` must be unchanged after a bisect, so a session cannot leak
+  stale worktree registrations into the measured repository.
 
-Two defects were found by this suite and fixed: the fixture originally shadowed
+Three defects were found by review and this suite, and fixed: the fixture originally shadowed
 the worker-selected tree with the repository root (bisect therefore measured one
 tree for every commit), and the 20-iteration fixture ran in ~1.5 ms per process,
 where a single scheduler hiccup could break the revert assertion. The fixture now
 imports only from the worker-selected tree and uses 200 iterations per process;
-12 consecutive full-suite runs passed.
+the third is that `bisect` deleted its temp worktree directories with
+`shutil.rmtree` without unregistering them, so `git worktree list` accumulated
+entries in the measured repository — cleanup now calls `git worktree remove
+--force` (falling back to `git worktree prune`).
 
 ## Environment
 

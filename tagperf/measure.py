@@ -105,6 +105,17 @@ def _git(repo: str, *args: str) -> str:
     return proc.stdout.strip()
 
 
+def release_worktree(repo: str, workdir) -> None:
+    """Unregister a worktree so `git worktree list` does not accumulate entries."""
+    try:
+        _git(repo, "worktree", "remove", "--force", str(workdir))
+    except MeasureError:
+        try:
+            _git(repo, "worktree", "prune")
+        except MeasureError:
+            pass
+
+
 def source_at(repo: str, rev: str, workdir: Path) -> Path:
     _git(repo, "worktree", "add", "--detach", str(workdir), rev)
     for candidate in ("src", "."):

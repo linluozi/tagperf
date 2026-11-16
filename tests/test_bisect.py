@@ -81,3 +81,13 @@ def test_bisect_localises_a_speedup(tmp_path):
     assert result["direction"] == "speedup"
     assert result["culprit"] == fast
     assert result["attempts"][-1]["verified"] is True
+
+
+def test_bisect_does_not_leak_worktree_registrations(tmp_path):
+    repo, _ = build_repo(tmp_path, mode="slowdown")
+    wl = tmp_path / "workload.py"
+    wl.write_text(WORKLOAD)
+    before = len(git(repo, "worktree", "list").splitlines())
+    bisect(str(repo), "v1", "v2", str(wl), iters=50, repeats=1,
+           threshold_ratio=1.10, max_steps=8)
+    assert len(git(repo, "worktree", "list").splitlines()) == before

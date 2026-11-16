@@ -9,7 +9,7 @@ import shutil
 import tempfile
 from pathlib import Path
 
-from .measure import MeasureError, _git, measure_source, source_at
+from .measure import MeasureError, _git, measure_source, release_worktree, source_at
 
 
 def commits_between(repo: str, good: str, bad: str) -> list[str]:
@@ -29,14 +29,18 @@ class _Trees:
         self.repo = str(repo)
         self.root = Path(tempfile.mkdtemp(prefix="tagperf-bisect-"))
         self.cache = {}
+        self.trees = []
 
     def src(self, rev: str) -> str:
         if rev not in self.cache:
             tree = self.root / rev
             self.cache[rev] = str(source_at(self.repo, rev, tree))
+            self.trees.append(tree)
         return self.cache[rev]
 
     def close(self):
+        for tree in self.trees:
+            release_worktree(self.repo, tree)
         shutil.rmtree(self.root, ignore_errors=True)
 
     def __enter__(self):
@@ -147,4 +151,5 @@ def revert_check(repo: str, commit: str, workload: str, iters: int, repeats: int
             "patch_lines": len(diff.splitlines()), "samples_us": after["samples_us"],
         }
     finally:
+        release_worktree(repo, tree)
         shutil.rmtree(tmp, ignore_errors=True)
