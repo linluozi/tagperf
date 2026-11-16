@@ -55,54 +55,70 @@ def bisect(repo: str, good: str, bad: str, workload: str, iters: int, repeats: i
     the good and bad release medians.  No measurement taken during the search
     can move the goalposts.
     """
-    with _Trees(repo) as trees:
-        good_m = measure_source(workload, trees.src(good), iters, repeats)
-        bad_m = measure_source(workload, trees.src(bad), iters, repeats)
-        midpoint = math.sqrt(good_m["median_us"] * bad_m["median_us"])
-        rising = bad_m["median_us"] > good_m["median_us"]
-        revs = commits_between(repo, good, bad)
-        if not revs:
-            raise MeasureError(f"no commits between {good} and {bad}")
+    def attempt(reps: int) -> dict:
+        with _Trees(repo) as trees:
+            good_m = measure_source(workload, trees.src(good), iters, reps)
+            bad_m = measure_source(workload, trees.src(bad), iters, reps)
+            midpoint = math.sqrt(good_m["median_us"] * bad_m["median_us"])
+            rising = bad_m["median_us"] > good_m["median_us"]
+            revs = commits_between(repo, good, bad)
+            if not revs:
+                raise MeasureError(f"no commits between {good} and {bad}")
 
-        def value(rev: str) -> float:
-            return measure_source(workload, trees.src(rev), iters, repeats)["median_us"]
+            def value(rev: str) -> float:
+                return measure_source(workload, trees.src(rev), iters, reps)["median_us"]
 
-        def crossed(m: float) -> bool:
-            return m >= midpoint if rising else m <= midpoint
+            def crossed(m: float) -> bool:
+                return m >= midpoint if rising else m <= midpoint
 
-        lo, hi = -1, len(revs) - 1
-        steps = []
-        while hi - lo > 1 and len(steps) < max_steps:
-            mid = (lo + hi) // 2
-            m = value(revs[mid])
-            is_bad = crossed(m)
-            steps.append({"commit": revs[mid], "median_us": m,
-                          "class": "bad" if is_bad else "good",
-                          "ratio_vs_good": m / good_m["median_us"]})
-            if is_bad:
-                hi = mid
-            else:
-                lo = mid
+            lo, hi = -1, len(revs) - 1
+            steps = []
+            while hi - lo > 1 and len(steps) < max_steps:
+                mid = (lo + hi) // 2
+                m = value(revs[mid])
+                is_bad = crossed(m)
+                steps.append({"commit": revs[mid], "median_us": m,
+                              "class": "bad" if is_bad else "good",
+                              "ratio_vs_good": m / good_m["median_us"]})
+                if is_bad:
+                    hi = mid
+                else:
+                    lo = mid
 
-        culprit = revs[hi]
-        before = revs[hi - 1] if hi > 0 else good
-        previous_us = good_m["median_us"] if before == good else value(before)
-        culprit_us = value(culprit)
-        return {
-            "good_tag": good, "bad_tag": bad,
-            "good_median_us": good_m["median_us"], "bad_median_us": bad_m["median_us"],
-            "midpoint_us": midpoint, "commits_in_range": len(revs),
-            "steps": steps, "builds": len(steps),
-            "culprit": culprit, "culprit_subject": _git(repo, "log", "-1", "--format=%s", culprit),
-            "culprit_date": _git(repo, "log", "-1", "--format=%cI", culprit),
-            "previous_commit": before, "previous_median_us": previous_us,
-            "culprit_median_us": culprit_us,
-            "culprit_is_merge": is_merge(repo, culprit),
-            "direction": "slowdown" if rising else "speedup",
-            "previous_is_good": not crossed(previous_us),
-            "culprit_is_bad": crossed(culprit_us),
-            "threshold_ratio": threshold_ratio,
-        }
+            culprit = revs[hi]
+            before = revs[hi - 1] if hi > 0 else good
+            previous_us = good_m["median_us"] if before == good else value(before)
+            culprit_us = value(culprit)
+            return {
+                "good_tag": good, "bad_tag": bad,
+                "good_median_us": good_m["median_us"], "bad_median_us": bad_m["median_us"],
+                "midpoint_us": midpoint, "commits_in_range": len(revs),
+                "steps": steps, "builds": len(steps),
+                "culprit": culprit,
+                "culprit_subject": _git(repo, "log", "-1", "--format=%s", culprit),
+                "culprit_date": _git(repo, "log", "-1", "--format=%cI", culprit),
+                "previous_commit": before, "previous_median_us": previous_us,
+                "culprit_median_us": culprit_us,
+                "culprit_is_merge": is_merge(repo, culprit),
+                "direction": "slowdown" if rising else "speedup",
+                "previous_is_good": not crossed(previous_us),
+                "culprit_is_bad": crossed(culprit_us),
+                "threshold_ratio": threshold_ratio,
+            }
+
+    def verified(r: dict) -> bool:
+        return r["previous_is_good"] and r["culprit_is_bad"]
+
+    result = attempt(repeats)
+    attempts = [{"repeats": repeats, "verified": verified(result), "culprit": result["culprit"]}]
+    if not verified(result):
+        # The result failed its own verification: re-measure every step with a
+        # doubled repeat budget before reporting anything.
+        result = attempt(repeats * 2)
+        attempts.append({"repeats": repeats * 2, "verified": verified(result),
+                         "culprit": result["culprit"]})
+    result["attempts"] = attempts
+    return result
 
 
 def revert_check(repo: str, commit: str, workload: str, iters: int, repeats: int,

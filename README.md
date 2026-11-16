@@ -53,6 +53,9 @@ Design rules that the code enforces:
   `previous_is_good` and `culprit_is_bad`. If the culprit does not re-measure on
   the wrong side of the midpoint, the result is reported as unverified — see the
   negative result below.
+- **Verification-driven escalation.** When a result fails its own verification,
+  `bisect` re-runs the whole search with a doubled repeat budget and reports both
+  attempts in `attempts`, instead of returning the unverified answer.
 
 ## Install
 
@@ -168,14 +171,24 @@ time, on an otherwise idle machine.
 
 ## Tests
 
-`6 passed in 2.38s` (`python -m pytest tests -q`). Coverage:
+`7 passed in 21.1s` (`python -m pytest tests -q`). Coverage:
 
 - changepoint detection, flat/noise rejection, deterministic bootstrap CI;
 - an end-to-end synthetic git repository with 8 commits: the bisect must find the
   one injected slowdown commit, then the revert must restore the baseline within
-  tolerance. The fixture initially shadowed the worktree with the repo root and
-  the test caught it — the working fixture imports from the tree that the worker
-  selects.
+  tolerance;
+- the same fixture in reverse: a commit that *removes* the cost must be found with
+  `direction=speedup`, which is the regression test for the one-directional
+  classifier bug described above;
+- both bisects assert `attempts[-1].verified is True`, so an unverified answer
+  fails the suite rather than being reported.
+
+Two defects were found by this suite and fixed: the fixture originally shadowed
+the worker-selected tree with the repository root (bisect therefore measured one
+tree for every commit), and the 20-iteration fixture ran in ~1.5 ms per process,
+where a single scheduler hiccup could break the revert assertion. The fixture now
+imports only from the worker-selected tree and uses 200 iterations per process;
+12 consecutive full-suite runs passed.
 
 ## Environment
 
