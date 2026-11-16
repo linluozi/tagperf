@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tagperf"
+version = "0.1.0"
+description = "Cross-release performance archaeology: trajectory, A/A control, bisect, revert proof"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "linluozi"}]
+dependencies = []
+
+[project.scripts]
+tagperf = "tagperf.cli:main"
+
+[tool.setuptools]
+packages = ["tagperf"]

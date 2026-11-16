@@ -1,0 +1,743 @@
+{
+  "repo": "/tmp/realup/click",
+  "workload": "workloads/click_many.py",
+  "iters": 12,
+  "repeats": 5,
+  "tags": {
+    "8.0.0": {
+      "src": "/tmp/tagperf-u_jlglwk/8.0.0/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1592.3078171908855,
+        1273.3438052237034,
+        1248.8272041082382,
+        1707.1403563022614,
+        1274.2755934596062
+      ],
+      "median_us": 1274.2755934596062,
+      "p25_us": 1273.3438052237034,
+      "p75_us": 1592.3078171908855,
+      "rsd": 0.16839447303056712,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1592.3078171908855,
+          "per_op_us_min": 1233.1996113061905,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1273.3438052237034,
+          "per_op_us_min": 1230.933703482151,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1248.8272041082382,
+          "per_op_us_min": 1227.7066707611084,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1707.1403563022614,
+          "per_op_us_min": 1679.6058043837547,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1274.2755934596062,
+          "per_op_us_min": 1224.8829007148743,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.0.2": {
+      "src": "/tmp/tagperf-u_jlglwk/8.0.2/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1701.9840888679028,
+        1240.1966378092766,
+        1279.3452478945255,
+        1294.2338362336159,
+        1708.6975276470184
+      ],
+      "median_us": 1294.2338362336159,
+      "p25_us": 1279.3452478945255,
+      "p75_us": 1701.9840888679028,
+      "rsd": 0.18434551262599239,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1701.9840888679028,
+          "per_op_us_min": 1266.9218704104424,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1240.1966378092766,
+          "per_op_us_min": 1221.9874188303947,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1279.3452478945255,
+          "per_op_us_min": 1254.1674077510834,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1294.2338362336159,
+          "per_op_us_min": 1271.9817459583282,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1708.6975276470184,
+          "per_op_us_min": 1396.6560363769531,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.0.4": {
+      "src": "/tmp/tagperf-u_jlglwk/8.0.4/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1264.3970549106598,
+        1257.6696462929249,
+        1292.129047214985,
+        1259.6333399415016,
+        1253.7576258182526
+      ],
+      "median_us": 1259.6333399415016,
+      "p25_us": 1257.6696462929249,
+      "p75_us": 1264.3970549106598,
+      "rsd": 0.012195434476017961,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1264.3970549106598,
+          "per_op_us_min": 1229.3513864278793,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1257.6696462929249,
+          "per_op_us_min": 1230.454072356224,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1292.129047214985,
+          "per_op_us_min": 1214.2732739448547,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1259.6333399415016,
+          "per_op_us_min": 1232.6482683420181,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1253.7576258182526,
+          "per_op_us_min": 1224.0316718816757,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.1.0": {
+      "src": "/tmp/tagperf-u_jlglwk/8.1.0/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1269.3768367171288,
+        1285.5571694672108,
+        1268.9405120909214,
+        1259.5327571034431,
+        1274.7664004564285
+      ],
+      "median_us": 1269.3768367171288,
+      "p25_us": 1268.9405120909214,
+      "p75_us": 1274.7664004564285,
+      "rsd": 0.007499067694762008,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1269.3768367171288,
+          "per_op_us_min": 1235.954463481903,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1285.5571694672108,
+          "per_op_us_min": 1240.5822053551674,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1268.9405120909214,
+          "per_op_us_min": 1242.2958388924599,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1259.5327571034431,
+          "per_op_us_min": 1231.5865606069565,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1274.7664004564285,
+          "per_op_us_min": 1237.6457452774048,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.1.2": {
+      "src": "/tmp/tagperf-u_jlglwk/8.1.2/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1284.0288691222668,
+        1473.1199480593204,
+        1270.3035026788712,
+        1264.7826224565506,
+        1259.4722211360931
+      ],
+      "median_us": 1270.3035026788712,
+      "p25_us": 1264.7826224565506,
+      "p75_us": 1284.0288691222668,
+      "rsd": 0.07199400943545756,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1284.0288691222668,
+          "per_op_us_min": 1254.0584430098534,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1473.1199480593204,
+          "per_op_us_min": 1249.8600408434868,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1270.3035026788712,
+          "per_op_us_min": 1230.4428964853287,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1264.7826224565506,
+          "per_op_us_min": 1232.5374409556389,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1259.4722211360931,
+          "per_op_us_min": 1242.1850115060806,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.1.4": {
+      "src": "/tmp/tagperf-u_jlglwk/8.1.4/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1427.0986430346966,
+        1263.9863416552544,
+        1261.6273015737534,
+        1243.5340322554111,
+        1248.8779611885548
+      ],
+      "median_us": 1261.6273015737534,
+      "p25_us": 1248.8779611885548,
+      "p75_us": 1263.9863416552544,
+      "rsd": 0.06155390259620952,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1427.0986430346966,
+          "per_op_us_min": 1240.5626475811005,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1263.9863416552544,
+          "per_op_us_min": 1237.0552867650986,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1261.6273015737534,
+          "per_op_us_min": 1240.091398358345,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1243.5340322554111,
+          "per_op_us_min": 1231.2140315771103,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1248.8779611885548,
+          "per_op_us_min": 1232.7879667282104,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.1.6": {
+      "src": "/tmp/tagperf-u_jlglwk/8.1.6/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1258.927397429943,
+        1265.964936465025,
+        1566.705759614706,
+        1241.8655678629875,
+        1264.933031052351
+      ],
+      "median_us": 1264.933031052351,
+      "p25_us": 1258.927397429943,
+      "p75_us": 1265.964936465025,
+      "rsd": 0.10943574522194552,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1258.927397429943,
+          "per_op_us_min": 1225.0831350684166,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1265.964936465025,
+          "per_op_us_min": 1236.9360774755478,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1566.705759614706,
+          "per_op_us_min": 1241.8553233146667,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1241.8655678629875,
+          "per_op_us_min": 1219.4933369755745,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1264.933031052351,
+          "per_op_us_min": 1246.2027370929718,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.1.8": {
+      "src": "/tmp/tagperf-u_jlglwk/8.1.8/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1184.9822476506233,
+        1122.6753704249859,
+        1124.1338215768337,
+        1131.7324824631214,
+        1145.975198596716
+      ],
+      "median_us": 1131.7324824631214,
+      "p25_us": 1124.1338215768337,
+      "p75_us": 1145.975198596716,
+      "rsd": 0.022791465892848778,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1184.9822476506233,
+          "per_op_us_min": 1130.836084485054,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1122.6753704249859,
+          "per_op_us_min": 1113.0934581160545,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1124.1338215768337,
+          "per_op_us_min": 1102.8135195374489,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1131.7324824631214,
+          "per_op_us_min": 1113.162375986576,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1145.975198596716,
+          "per_op_us_min": 1116.9705539941788,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.2.0": {
+      "src": "/tmp/tagperf-u_jlglwk/8.2.0/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1127.354335039854,
+        1136.1814104020596,
+        1138.270366936922,
+        1130.721066147089,
+        1139.8824863135815
+      ],
+      "median_us": 1136.1814104020596,
+      "p25_us": 1130.721066147089,
+      "p75_us": 1138.270366936922,
+      "rsd": 0.004643801876287319,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1127.354335039854,
+          "per_op_us_min": 1116.0988360643387,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1136.1814104020596,
+          "per_op_us_min": 1111.1898347735405,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1138.270366936922,
+          "per_op_us_min": 1110.7083410024643,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1130.721066147089,
+          "per_op_us_min": 1109.6065863966942,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1139.8824863135815,
+          "per_op_us_min": 1117.1400547027588,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.2.2": {
+      "src": "/tmp/tagperf-u_jlglwk/8.2.2/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1144.9172161519527,
+        1507.0834197103977,
+        1148.2792906463146,
+        1138.9311403036118,
+        1142.5279080867767
+      ],
+      "median_us": 1144.9172161519527,
+      "p25_us": 1142.5279080867767,
+      "p75_us": 1148.2792906463146,
+      "rsd": 0.14198577863219522,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1144.9172161519527,
+          "per_op_us_min": 1121.2881654500961,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1507.0834197103977,
+          "per_op_us_min": 1141.8676003813744,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1148.2792906463146,
+          "per_op_us_min": 1116.6185140609741,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1138.9311403036118,
+          "per_op_us_min": 1118.0918663740158,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1142.5279080867767,
+          "per_op_us_min": 1119.0436780452728,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.3.0": {
+      "src": "/tmp/tagperf-u_jlglwk/8.3.0/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1146.666705608368,
+        1397.1216976642609,
+        1128.501258790493,
+        1144.742127507925,
+        1154.9112387001514
+      ],
+      "median_us": 1146.666705608368,
+      "p25_us": 1144.742127507925,
+      "p75_us": 1154.9112387001514,
+      "rsd": 0.09918736552287948,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1146.666705608368,
+          "per_op_us_min": 1121.4176192879677,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1397.1216976642609,
+          "per_op_us_min": 1146.1852118372917,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1128.501258790493,
+          "per_op_us_min": 1111.1386120319366,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1144.742127507925,
+          "per_op_us_min": 1117.359846830368,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1154.9112387001514,
+          "per_op_us_min": 1113.6345565319061,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.3.3": {
+      "src": "/tmp/tagperf-u_jlglwk/8.3.3/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1149.1859331727028,
+        1145.7395739853382,
+        1142.5330303609371,
+        1184.8770081996918,
+        1122.9566298425198
+      ],
+      "median_us": 1145.7395739853382,
+      "p25_us": 1142.5330303609371,
+      "p75_us": 1149.1859331727028,
+      "rsd": 0.01960344727919991,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1149.1859331727028,
+          "per_op_us_min": 1124.6353387832642,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1145.7395739853382,
+          "per_op_us_min": 1116.0681024193764,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1142.5330303609371,
+          "per_op_us_min": 1119.7160929441452,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1184.8770081996918,
+          "per_op_us_min": 1119.2439123988152,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1122.9566298425198,
+          "per_op_us_min": 1113.254576921463,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.4.0": {
+      "src": "/tmp/tagperf-u_jlglwk/8.4.0/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1142.6336131989956,
+        1141.8010108172894,
+        1177.098136395216,
+        1140.4645629227161,
+        1159.1841466724873
+      ],
+      "median_us": 1142.6336131989956,
+      "p25_us": 1141.8010108172894,
+      "p75_us": 1159.1841466724873,
+      "rsd": 0.013879564556842158,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1142.6336131989956,
+          "per_op_us_min": 1123.1834068894386,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1141.8010108172894,
+          "per_op_us_min": 1114.4960299134254,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1177.098136395216,
+          "per_op_us_min": 1141.2166059017181,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1140.4645629227161,
+          "per_op_us_min": 1115.3370141983032,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1159.1841466724873,
+          "per_op_us_min": 1123.7245053052902,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.5.0": {
+      "src": "/tmp/tagperf-u_jlglwk/8.5.0/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1169.9148453772068,
+        1181.657426059246,
+        1575.833186507225,
+        1136.0105127096176,
+        1133.1248097121716
+      ],
+      "median_us": 1169.9148453772068,
+      "p25_us": 1136.0105127096176,
+      "p75_us": 1181.657426059246,
+      "rsd": 0.16180409744018293,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1169.9148453772068,
+          "per_op_us_min": 1142.418012022972,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1181.657426059246,
+          "per_op_us_min": 1144.7612196207047,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1575.833186507225,
+          "per_op_us_min": 1259.027048945427,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1136.0105127096176,
+          "per_op_us_min": 1122.8909716010094,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1133.1248097121716,
+          "per_op_us_min": 1117.6420375704765,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    },
+    "8.5.1": {
+      "src": "/tmp/tagperf-u_jlglwk/8.5.1/src",
+      "workload": "workloads/click_many.py",
+      "iters": 12,
+      "repeats": 5,
+      "samples_us": [
+        1141.0354636609554,
+        1519.8471955955029,
+        1140.5735276639462,
+        1156.92475810647,
+        1134.688500314951
+      ],
+      "median_us": 1141.0354636609554,
+      "p25_us": 1140.5735276639462,
+      "p75_us": 1156.92475810647,
+      "rsd": 0.14775753344330014,
+      "raw_runs": [
+        {
+          "per_op_us_median": 1141.0354636609554,
+          "per_op_us_min": 1124.4025081396103,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1519.8471955955029,
+          "per_op_us_min": 1208.021305501461,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1140.5735276639462,
+          "per_op_us_min": 1121.2080717086792,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1156.92475810647,
+          "per_op_us_min": 1126.3582855463028,
+          "iters": 12,
+          "workload": "click-many"
+        },
+        {
+          "per_op_us_median": 1134.688500314951,
+          "per_op_us_min": 1103.5352945327759,
+          "iters": 12,
+          "workload": "click-many"
+        }
+      ]
+    }
+  }
+}

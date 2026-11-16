@@ -1,0 +1,743 @@
+{
+  "repo": "/tmp/realup/click",
+  "workload": "workloads/click_help.py",
+  "iters": 120,
+  "repeats": 5,
+  "tags": {
+    "8.0.0": {
+      "src": "/tmp/tagperf-22azp14u/8.0.0/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        462.2642882168293,
+        668.0409424006939,
+        464.9641923606396,
+        461.83308586478233,
+        476.28534957766533
+      ],
+      "median_us": 464.9641923606396,
+      "p25_us": 462.2642882168293,
+      "p75_us": 476.28534957766533,
+      "rsd": 0.19441393306996468,
+      "raw_runs": [
+        {
+          "per_op_us_median": 462.2642882168293,
+          "per_op_us_min": 444.30606067180634,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 668.0409424006939,
+          "per_op_us_min": 563.6801943182945,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 464.9641923606396,
+          "per_op_us_min": 444.93749737739563,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 461.83308586478233,
+          "per_op_us_min": 441.38915836811066,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 476.28534957766533,
+          "per_op_us_min": 444.5556551218033,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.0.2": {
+      "src": "/tmp/tagperf-22azp14u/8.0.2/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        461.2472839653492,
+        462.4146968126297,
+        459.8801024258137,
+        455.61278238892555,
+        460.72574332356453
+      ],
+      "median_us": 460.72574332356453,
+      "p25_us": 459.8801024258137,
+      "p75_us": 461.2472839653492,
+      "rsd": 0.0056570679994937,
+      "raw_runs": [
+        {
+          "per_op_us_median": 461.2472839653492,
+          "per_op_us_min": 441.2895068526268,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 462.4146968126297,
+          "per_op_us_min": 444.08533722162247,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 459.8801024258137,
+          "per_op_us_min": 437.3127594590187,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 455.61278238892555,
+          "per_op_us_min": 437.161885201931,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 460.72574332356453,
+          "per_op_us_min": 439.0347748994827,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.0.4": {
+      "src": "/tmp/tagperf-22azp14u/8.0.4/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        461.3571800291538,
+        467.0536145567894,
+        461.4624194800854,
+        459.6291109919548,
+        569.8660388588905
+      ],
+      "median_us": 461.4624194800854,
+      "p25_us": 461.3571800291538,
+      "p75_us": 467.0536145567894,
+      "rsd": 0.10434763042901408,
+      "raw_runs": [
+        {
+          "per_op_us_median": 461.3571800291538,
+          "per_op_us_min": 441.67041778564453,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 467.0536145567894,
+          "per_op_us_min": 446.2581127882004,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 461.4624194800854,
+          "per_op_us_min": 443.1232810020447,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 459.6291109919548,
+          "per_op_us_min": 442.8224638104439,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 569.8660388588905,
+          "per_op_us_min": 445.6387832760811,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.1.0": {
+      "src": "/tmp/tagperf-22azp14u/8.1.0/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        465.0391638278961,
+        472.5581966340542,
+        524.3709310889244,
+        461.91876754164696,
+        474.84738752245903
+      ],
+      "median_us": 472.5581966340542,
+      "p25_us": 465.0391638278961,
+      "p75_us": 474.84738752245903,
+      "rsd": 0.0539631287585716,
+      "raw_runs": [
+        {
+          "per_op_us_median": 465.0391638278961,
+          "per_op_us_min": 445.2373832464218,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 472.5581966340542,
+          "per_op_us_min": 446.32889330387115,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 524.3709310889244,
+          "per_op_us_min": 445.1274871826172,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 461.91876754164696,
+          "per_op_us_min": 444.68604028224945,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 474.84738752245903,
+          "per_op_us_min": 444.38522309064865,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.1.2": {
+      "src": "/tmp/tagperf-22azp14u/8.1.2/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        467.30879694223404,
+        471.621286123991,
+        486.09916120767593,
+        631.1414763331413,
+        467.8838886320591
+      ],
+      "median_us": 471.621286123991,
+      "p25_us": 467.8838886320591,
+      "p75_us": 486.09916120767593,
+      "rsd": 0.1506083631137276,
+      "raw_runs": [
+        {
+          "per_op_us_median": 467.30879694223404,
+          "per_op_us_min": 445.5177113413811,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 471.621286123991,
+          "per_op_us_min": 447.14100658893585,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 486.09916120767593,
+          "per_op_us_min": 448.8937556743622,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 631.1414763331413,
+          "per_op_us_min": 464.31273221969604,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 467.8838886320591,
+          "per_op_us_min": 448.45324009656906,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.1.4": {
+      "src": "/tmp/tagperf-22azp14u/8.1.4/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        461.02097257971764,
+        462.348572909832,
+        462.5944420695305,
+        464.58328142762184,
+        502.24410369992256
+      ],
+      "median_us": 462.5944420695305,
+      "p25_us": 462.348572909832,
+      "p75_us": 464.58328142762184,
+      "rsd": 0.038389176150060815,
+      "raw_runs": [
+        {
+          "per_op_us_median": 461.02097257971764,
+          "per_op_us_min": 442.5123333930969,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 462.348572909832,
+          "per_op_us_min": 445.70770114660263,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 462.5944420695305,
+          "per_op_us_min": 444.5863887667656,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 464.58328142762184,
+          "per_op_us_min": 441.29975140094757,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 502.24410369992256,
+          "per_op_us_min": 443.82456690073013,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.1.6": {
+      "src": "/tmp/tagperf-22azp14u/8.1.6/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        468.91672536730766,
+        506.3926801085472,
+        467.8843542933464,
+        462.00817450881004,
+        466.44173562526703
+      ],
+      "median_us": 467.8843542933464,
+      "p25_us": 466.44173562526703,
+      "p75_us": 468.91672536730766,
+      "rsd": 0.038721323175944254,
+      "raw_runs": [
+        {
+          "per_op_us_median": 468.91672536730766,
+          "per_op_us_min": 446.3493824005127,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 506.3926801085472,
+          "per_op_us_min": 441.3491114974022,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 467.8843542933464,
+          "per_op_us_min": 439.7975280880928,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 462.00817450881004,
+          "per_op_us_min": 444.11513954401016,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 466.44173562526703,
+          "per_op_us_min": 443.72398406267166,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.1.8": {
+      "src": "/tmp/tagperf-22azp14u/8.1.8/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        354.1959449648857,
+        354.15589809417725,
+        351.10581666231155,
+        350.3076732158661,
+        353.98080945014954
+      ],
+      "median_us": 353.98080945014954,
+      "p25_us": 351.10581666231155,
+      "p75_us": 354.15589809417725,
+      "rsd": 0.005332185492852135,
+      "raw_runs": [
+        {
+          "per_op_us_median": 354.1959449648857,
+          "per_op_us_min": 335.5806693434715,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 354.15589809417725,
+          "per_op_us_min": 339.18675035238266,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 351.10581666231155,
+          "per_op_us_min": 334.0281546115875,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 350.3076732158661,
+          "per_op_us_min": 334.0393304824829,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 353.98080945014954,
+          "per_op_us_min": 338.064506649971,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.2.0": {
+      "src": "/tmp/tagperf-22azp14u/8.2.0/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        364.51080814003944,
+        361.15944385528564,
+        373.8030791282654,
+        361.51427775621414,
+        361.7452457547188
+      ],
+      "median_us": 361.7452457547188,
+      "p25_us": 361.51427775621414,
+      "p75_us": 364.51080814003944,
+      "rsd": 0.01477061131665017,
+      "raw_runs": [
+        {
+          "per_op_us_median": 364.51080814003944,
+          "per_op_us_min": 344.5977345108986,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 361.15944385528564,
+          "per_op_us_min": 346.0897132754326,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 373.8030791282654,
+          "per_op_us_min": 347.8843718767166,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 361.51427775621414,
+          "per_op_us_min": 343.63754093647003,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 361.7452457547188,
+          "per_op_us_min": 346.3719040155411,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.2.2": {
+      "src": "/tmp/tagperf-22azp14u/8.2.2/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        361.32941022515297,
+        362.1364012360573,
+        369.5990890264511,
+        374.4480200111866,
+        360.58761179447174
+      ],
+      "median_us": 362.1364012360573,
+      "p25_us": 361.32941022515297,
+      "p75_us": 369.5990890264511,
+      "rsd": 0.016889500084827914,
+      "raw_runs": [
+        {
+          "per_op_us_median": 361.32941022515297,
+          "per_op_us_min": 348.774716258049,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 362.1364012360573,
+          "per_op_us_min": 346.0710868239403,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 369.5990890264511,
+          "per_op_us_min": 347.28366881608963,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 374.4480200111866,
+          "per_op_us_min": 349.3772819638252,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 360.58761179447174,
+          "per_op_us_min": 345.7600250840187,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.3.0": {
+      "src": "/tmp/tagperf-22azp14u/8.3.0/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        362.36224696040154,
+        362.1010109782219,
+        371.2829202413559,
+        365.3676249086857,
+        360.07724702358246
+      ],
+      "median_us": 362.36224696040154,
+      "p25_us": 362.1010109782219,
+      "p75_us": 365.3676249086857,
+      "rsd": 0.01205315343952911,
+      "raw_runs": [
+        {
+          "per_op_us_median": 362.36224696040154,
+          "per_op_us_min": 345.9295257925987,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 362.1010109782219,
+          "per_op_us_min": 344.5083275437355,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 371.2829202413559,
+          "per_op_us_min": 346.8617796897888,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 365.3676249086857,
+          "per_op_us_min": 347.3423421382904,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 360.07724702358246,
+          "per_op_us_min": 345.5504775047302,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.3.3": {
+      "src": "/tmp/tagperf-22azp14u/8.3.3/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        367.1501763164997,
+        363.5738976299763,
+        357.89282992482185,
+        380.5854357779026,
+        363.75317722558975
+      ],
+      "median_us": 363.75317722558975,
+      "p25_us": 363.5738976299763,
+      "p75_us": 367.1501763164997,
+      "rsd": 0.023366329867180843,
+      "raw_runs": [
+        {
+          "per_op_us_median": 367.1501763164997,
+          "per_op_us_min": 348.0147570371628,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 363.5738976299763,
+          "per_op_us_min": 347.0722585916519,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 357.89282992482185,
+          "per_op_us_min": 343.947671353817,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 380.5854357779026,
+          "per_op_us_min": 346.0608422756195,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 363.75317722558975,
+          "per_op_us_min": 347.06294536590576,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.4.0": {
+      "src": "/tmp/tagperf-22azp14u/8.4.0/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        378.7623718380928,
+        396.795105189085,
+        396.9511017203331,
+        413.60221803188324,
+        366.2840463221073
+      ],
+      "median_us": 396.795105189085,
+      "p25_us": 378.7623718380928,
+      "p75_us": 396.9511017203331,
+      "rsd": 0.04611228398981216,
+      "raw_runs": [
+        {
+          "per_op_us_median": 378.7623718380928,
+          "per_op_us_min": 356.7999228835106,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 396.795105189085,
+          "per_op_us_min": 357.331708073616,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 396.9511017203331,
+          "per_op_us_min": 353.6045551300049,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 413.60221803188324,
+          "per_op_us_min": 356.3603386282921,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 366.2840463221073,
+          "per_op_us_min": 352.27276384830475,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.5.0": {
+      "src": "/tmp/tagperf-22azp14u/8.5.0/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        480.22810369729996,
+        455.48146590590477,
+        392.1566531062126,
+        391.9466398656368,
+        421.6623492538929
+      ],
+      "median_us": 421.6623492538929,
+      "p25_us": 392.1566531062126,
+      "p75_us": 455.48146590590477,
+      "rsd": 0.092668205802605,
+      "raw_runs": [
+        {
+          "per_op_us_median": 480.22810369729996,
+          "per_op_us_min": 376.55699998140335,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 455.48146590590477,
+          "per_op_us_min": 370.2063113451004,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 392.1566531062126,
+          "per_op_us_min": 373.8934174180031,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 391.9466398656368,
+          "per_op_us_min": 373.1921315193176,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 421.6623492538929,
+          "per_op_us_min": 371.2587058544159,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    },
+    "8.5.1": {
+      "src": "/tmp/tagperf-22azp14u/8.5.1/src",
+      "workload": "workloads/click_help.py",
+      "iters": 120,
+      "repeats": 5,
+      "samples_us": [
+        385.0986249744892,
+        385.3687085211277,
+        386.66650652885437,
+        477.1025851368904,
+        382.1840509772301
+      ],
+      "median_us": 385.3687085211277,
+      "p25_us": 385.0986249744892,
+      "p75_us": 386.66650652885437,
+      "rsd": 0.10716567804386254,
+      "raw_runs": [
+        {
+          "per_op_us_median": 385.0986249744892,
+          "per_op_us_min": 366.1196678876877,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 385.3687085211277,
+          "per_op_us_min": 367.24936217069626,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 386.66650652885437,
+          "per_op_us_min": 362.95223981142044,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 477.1025851368904,
+          "per_op_us_min": 365.5562177300453,
+          "iters": 120,
+          "workload": "click-help"
+        },
+        {
+          "per_op_us_median": 382.1840509772301,
+          "per_op_us_min": 364.3641248345375,
+          "iters": 120,
+          "workload": "click-help"
+        }
+      ]
+    }
+  }
+}
